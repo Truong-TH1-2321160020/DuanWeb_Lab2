@@ -24,6 +24,7 @@ public class DbContext {
         return conn;
     }
     
+    
     public static void main(String[] args)
     {
         System.out.println("Ket Qua ket noi:" + DbContext.getConnection());

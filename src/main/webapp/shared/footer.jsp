@@ -1,6 +1,6 @@
 <%@page pageEncoding="UTF-8" %>
 <footer class="container">
-            <strong>&copy; 2024 - Nguyễn Tuấn Kiệt - 2321010520 </strong>
+            <strong>&copy; 2024 - Nguyen Xuan Truong - 2321160020 </strong>
         </footer>
 
         <!-- Optional JavaScript -->

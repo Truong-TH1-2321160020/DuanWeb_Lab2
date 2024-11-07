@@ -30,6 +30,7 @@
      ArrayList<Hoa> dsHoa = dao.getByCategoryId(loai);
 %>
 
+
 <div class="container" id="main-content">
     <div class="row">
         <div class="col-sm-3">

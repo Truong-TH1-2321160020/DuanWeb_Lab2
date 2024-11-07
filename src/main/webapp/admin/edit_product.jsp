@@ -19,6 +19,7 @@
         ArrayList<Loai>dsLoai=(ArrayList<Loai>)request.getAttribute("dsLoai");
     %>
     
+    
     <h2>Cập nhật sản phẩm (Hoa)</h2>    
     <form method="post">
         <div class="mb-2">

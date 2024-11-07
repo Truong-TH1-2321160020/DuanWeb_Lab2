@@ -17,7 +17,6 @@ public class Hoa {
     private String hinh;
     private int maloai;
     private Date ngaycapnhat;
-
     public Hoa() {
     }
 

@@ -20,6 +20,7 @@ public class Loai {
         this.tenloai = tenloai;
     }
 
+    
     public int getMaloai() {
         return maloai;
     }

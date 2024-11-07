@@ -37,7 +37,7 @@ public class HoaDAO {
         return ds;
     }
 
-    //Phương thức đọc hoa theo thể loại
+ 
     public ArrayList<Hoa> getByCategoryId(int maloai) {
         ArrayList<Hoa> ds = new ArrayList<>();
         String sql = "select * from Hoa where maloai=?";

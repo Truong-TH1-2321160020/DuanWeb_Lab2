@@ -12,7 +12,6 @@
 
 <jsp:include page="../shared/nav.jsp" />
 
-
 <%
     if (request.getAttribute("success") != null) {
 %>

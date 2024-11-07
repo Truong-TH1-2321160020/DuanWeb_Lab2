@@ -39,6 +39,7 @@ public class LogoutServlet extends HttpServlet {
             response.sendRedirect("login.jsp");
         }
         
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

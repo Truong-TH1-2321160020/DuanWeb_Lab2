@@ -8,39 +8,46 @@ import context.DbContext;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
-import model.Loai;
+import model.TaiKhoan;
 
-
-public class LoaiDAO {
+/**
+ *
+ * @author ADMIN
+ */
+public class TaiKhoanDAO {
 
     Connection conn;
     PreparedStatement ps;
     ResultSet rs;
 
-    public ArrayList<Loai> getAll() {
-        ArrayList<Loai> ds = new ArrayList<>();
-        String sql = "select * from Loai";
+    public TaiKhoan checkLogin(String tendangnhap, String matkhau) {
+        TaiKhoan kq = null;
+        String sql = "select * from Taikhoan where tendangnhap=? and matkhau=?";
         conn = DbContext.getConnection();
         try {
             ps = conn.prepareStatement(sql);
+            ps.setString(1, tendangnhap);
+            ps.setString(2, matkhau);
             rs = ps.executeQuery();
-            while (rs.next()) {
-                ds.add(new Loai(rs.getInt(1),rs.getString(2)));
+            if (rs.next()) {
+                kq = new TaiKhoan(rs.getString(1), rs.getString(2));
             }
         } catch (Exception ex) {
             System.out.println("Loi:" + ex.toString());
+
         }
-        return ds;
+        return kq;
     }
     
-    
     public static void main(String[] args) {
-        LoaiDAO loaiDAO = new LoaiDAO();
-        
-        ArrayList<Loai> dsLoai = loaiDAO.getAll();  
-        for(Loai l : dsLoai){
-            System.out.println(l);
+        TaiKhoanDAO tkDAO = new TaiKhoanDAO();
+        if(tkDAO.checkLogin("kietdepchai","123456")!=null)
+        {
+            System.out.println("OK");
+        }else
+        {
+            System.out.println("Not Ok");
         }
+            
     }
 }
